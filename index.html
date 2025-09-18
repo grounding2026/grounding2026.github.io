@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Augmenting Image LLMs for Diverse Video Grounding Tasks Without Training">
+  <meta name="keywords" content="Augmenting Image LLMs for Diverse Video Grounding Tasks Without Training">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Augmenting Image LLMs for Diverse Video Grounding Tasks Without Training</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <!-- <link rel="icon"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Augmenting Image LLMs for Diverse Video Grounding Tasks Without
+              Training</h1>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/grounding2026" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              Video Large Language Models (Video LLMs) demonstrate strong performance in captioning and question
+              answering but struggle to accurately ground text queries in videos.
+              Existing methods often depend on temporal-aware training and extensive instruction tuning, which are
+              costly and limit generalization.
+              We propose a training-free framework that adapts Image LLMs for video grounding through a two-stage
+              pipeline.
+              First, <b>Query-Guided Multi-Granularity Image Description</b> uses an Image LLM to convert video frames
+              into structured descriptions capturing scene- and object-level semantics.
+              Second, <b>Guided Grounding Prediction</b> employs a tailored prompt template that integrates these
+              descriptions with task-specific instructions, enabling an LLM to reason over temporal context and localize
+              moments.
+              Extensive experiments on three grounding tasks across diverse domains demonstrate that our approach
+              surpasses several Video LLMs and achieves results competitive with specialized training-based models,
+              highlighting its effectiveness, adaptability, and strong generalization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/introduction.jpg" style="width: 100%; display: block; margin: 0 auto;" alt>
+        <h2 class="subtitle has-text-left">
+          <b>Paradigm comparison for video grounding.</b> <br><b>(a)</b> Existing Video LLMs require resource-intensive
+          instruction tuning and exhibit limited generalization across tasks and domains. <br><b>(b)</b> Our method
+          adapts an Image LLM without training, achieving stronger generalization.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Framework</h2>
+      <div class="hero-body">
+        <img src="static/images/framework.jpg" style="width: 100%; display: block; margin: 0 auto;" alt>
+        <h2 class="subtitle has-text-left">
+          <b>Overview of the proposed framework. It consists of two stages:</b> <br><b>(1)</b> an Image LLM generates
+          multi-granularity frame descriptions capturing scene- and object-level details; <br><b>(2)</b> a prompt
+          template integrates these descriptions with guideline and task instructions, guiding an LLM to perform
+          grounding.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Prompt Template</h2>
+      <div class="hero-body">
+        <img src="static/images/prompt_template.jpg" style="width: 80%; display: block; margin: 0 auto;" alt>
+        <h2 class="subtitle has-text-centered">
+          An example of the prompt template.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Visualization</h2>
+      <div class="hero-body">
+        <img src="static/images/vis1.jpg" style="width: 80%; display: block; margin: 0 auto;" alt>
+        <img src="static/images/vis2.jpg" style="width: 80%; display: block; margin: 0 auto;" alt>
+        <h2 class="subtitle has-text-centered">
+          Qualitative visualization of grounding results on ActivityNet Captions.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
